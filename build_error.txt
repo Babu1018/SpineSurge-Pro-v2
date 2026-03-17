@@ -1,0 +1,28 @@
+
+> spinesurge-pro@1.0.0 build
+> electron-vite build
+
+[36mvite v7.3.0 [32mbuilding ssr environment for production...[36m[39m
+transforming...
+[32m✓[39m 2 modules transformed.
+rendering chunks...
+[2mout/main/[22m[36mindex.js  [39m[1m[2m12.74 kB[22m[1m[22m
+[32m✓ built in 463ms[39m
+[36mvite v7.3.0 [32mbuilding ssr environment for production...[36m[39m
+transforming...
+[32m✓[39m 2 modules transformed.
+rendering chunks...
+[2mout/preload/[22m[36mindex.mjs  [39m[1m[2m8.65 kB[22m[1m[22m
+[32m✓ built in 28ms[39m
+[36mvite v7.3.0 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32m✓[39m 3438 modules transformed.
+[31m✗[39m Build failed in 7.22s
+[31merror during build:
+[31m[vite:worker] Could not load C:/work/SpineSurge-Pro-Electron/SpineSurge-Pro-Electron/src/renderer/dicom-worker/decodeImageFrameWorker.js?worker&url (imported by src/renderer/lib/cornerstone/initCornerstone.ts): Could not resolve "../../codecs/jpeg" from "src/renderer/dicom-worker/shared/decoders/decodeJPEGBaseline12Bit-js.js"[31m
+file: [36mC:/work/SpineSurge-Pro-Electron/SpineSurge-Pro-Electron/src/renderer/dicom-worker/shared/decoders/decodeJPEGBaseline12Bit-js.js[31m
+    at getRollupError (file:///C:/work/SpineSurge-Pro-Electron/SpineSurge-Pro-Electron/node_modules/rollup/dist/es/shared/parseAst.js:401:41)
+    at error (file:///C:/work/SpineSurge-Pro-Electron/SpineSurge-Pro-Electron/node_modules/rollup/dist/es/shared/parseAst.js:397:42)
+    at ModuleLoader.handleInvalidResolvedId (file:///C:/work/SpineSurge-Pro-Electron/SpineSurge-Pro-Electron/node_modules/rollup/dist/es/shared/node-entry.js:21661:24)
+    at ModuleLoader.resolveDynamicImport (file:///C:/work/SpineSurge-Pro-Electron/SpineSurge-Pro-Electron/node_modules/rollup/dist/es/shared/node-entry.js:21721:58)
+    at async file:///C:/work/SpineSurge-Pro-Electron/SpineSurge-Pro-Electron/node_modules/rollup/dist/es/shared/node-entry.js:21605:32[39m

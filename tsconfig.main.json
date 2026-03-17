@@ -1,0 +1,19 @@
+{
+    "extends": "@electron-toolkit/tsconfig/tsconfig.node.json",
+    "include": [
+        "src/main/**/*",
+        "src/preload/**/*"
+    ],
+    "compilerOptions": {
+        "composite": true,
+        "types": [
+            "node"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "./src/renderer/*"
+            ]
+        }
+    }
+}

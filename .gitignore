@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+
+# Production Build Output (Electron-Vite)
+dist/
+dist-ssr/
+out/
+
+# Installer & Distribution Output (Electron-Builder)
+dist_electron/
+
+# Environment Variables (Keep .env.example)
+.env
+.env.local
+.env.*.local
+
+# Operations & Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+.eslintcache
+
+# Testing
+coverage/
+
+# OS System Files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+
+# Editor & IDE Directories
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+*.sw?
+
+# Agent & Temporary Artifacts
+.gemini/
+.kiro/
+html2canvas_placeholder

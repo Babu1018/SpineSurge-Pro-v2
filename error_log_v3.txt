@@ -1,0 +1,69 @@
+﻿
+> spinesurge-pro@1.0.0 type-check
+> tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.app.json
+
+src/renderer/App.tsx(6,1): error TS6133: 'AuthLayout' is declared but its value is never read.
+src/renderer/features/canvas/CanvasWorkspace.tsx(38,5): error TS6133: 'drawDeformedInferiorSegment' is declared but its value is never read.
+src/renderer/features/dicom/CornerstoneViewer.tsx(100,35): error TS2345: Argument of type 'string | null' is not assignable to parameter of type 'string'.
+  Type 'null' is not assignable to type 'string'.
+src/renderer/features/dicom/DICOMViewer.legacy.tsx(20,23): error TS7016: Could not find a declaration file for module '@kitware/vtk.js/Filters/Core/Cutter'. 'C:/work/SpineSurge-Pro-Electron/SpineSurge-Pro-Electron/node_modules/@kitware/vtk.js/Filters/Core/Cutter.js' implicitly has an 'any' type.
+  If the '@kitware/vtk.js' package actually exposes this module, try adding a new declaration (.d.ts) file containing `declare module '@kitware/vtk.js/Filters/Core/Cutter';`
+src/renderer/features/dicom/DICOMViewer.legacy.tsx(1469,20): error TS18047: 'placementCurrent' is possibly 'null'.
+src/renderer/features/dicom/DICOMViewer.legacy.tsx(1469,42): error TS18047: 'placementStart' is possibly 'null'.
+src/renderer/features/dicom/DICOMViewer.legacy.tsx(1470,20): error TS18047: 'placementCurrent' is possibly 'null'.
+src/renderer/features/dicom/DICOMViewer.legacy.tsx(1470,42): error TS18047: 'placementStart' is possibly 'null'.
+src/renderer/features/dicom/DICOMViewer.legacy.tsx(1471,20): error TS18047: 'placementCurrent' is possibly 'null'.
+src/renderer/features/dicom/DICOMViewer.legacy.tsx(1471,42): error TS18047: 'placementStart' is possibly 'null'.
+src/renderer/features/dicom/DICOMViewer.legacy.tsx(1485,13): error TS2322: Type '[number, number, number] | null' is not assignable to type '[number, number, number]'.
+  Type 'null' is not assignable to type '[number, number, number]'.
+src/renderer/features/dicom/volumeEraser.ts(1,1): error TS6133: 'ToolsEnums' is declared but its value is never read.
+src/renderer/features/dicom/volumeEraser.ts(1,10): error TS2305: Module '"@cornerstonejs/tools"' has no exported member 'ToolsEnums'.
+src/renderer/features/dicom/volumeEraser.ts(10,5): error TS6133: 'viewportId' is declared but its value is never read.
+src/renderer/features/measurements/deformity/tools/PelvicTools.ts(1,30): error TS6133: 'getDistance' is declared but its value is never read.
+src/renderer/features/measurements/deformity/tools/PelvicTools.ts(3,32): error TS2305: Module '"@/lib/canvas/CanvasUtils"' has no exported member 'drawPoint'.
+src/renderer/features/measurements/deformity/tools/PelvicTools.ts(3,32): error TS6133: 'drawPoint' is declared but its value is never read.
+src/renderer/features/measurements/deformity/tools/SpinopelvicTools.ts(3,32): error TS2305: Module '"@/lib/canvas/CanvasUtils"' has no exported member 'drawPoint'.
+src/renderer/features/measurements/deformity/tools/SpinopelvicTools.ts(3,32): error TS6133: 'drawPoint' is declared but its value is never read.
+src/renderer/features/measurements/pathology/Spondylolisthesis.ts(3,32): error TS2305: Module '"@/lib/canvas/CanvasUtils"' has no exported member 'drawPoint'.
+src/renderer/features/measurements/pathology/Spondylolisthesis.ts(3,32): error TS6133: 'drawPoint' is declared but its value is never read.
+src/renderer/features/measurements/pathology/Spondylolisthesis.ts(23,61): error TS6133: 'pixelToMm' is declared but its value is never read.
+src/renderer/features/measurements/pathology/Stenosis.ts(3,32): error TS2305: Module '"@/lib/canvas/CanvasUtils"' has no exported member 'drawPoint'.
+src/renderer/features/measurements/pathology/Stenosis.ts(3,32): error TS6133: 'drawPoint' is declared but its value is never read.
+src/renderer/features/measurements/planning/PedicleLogic.ts(2,1): error TS6192: All imports in import declaration are unused.
+src/renderer/features/measurements/planning/PedicleLogic.ts(2,29): error TS2305: Module '"@/lib/store/types"' has no exported member 'Vec3'.
+src/renderer/features/measurements/planning/PedicleLogic.ts(3,38): error TS6133: 'dot' is declared but its value is never read.
+src/renderer/features/measurements/planning/PedicleLogic.ts(24,28): error TS2339: Property 'getScalarData' does not exist on type 'ImageVolume | BaseStreamingImageVolume'.
+  Property 'getScalarData' does not exist on type 'ImageVolume'.
+src/renderer/features/measurements/planning/PedicleLogic.ts(26,31): error TS2339: Property 'getScalarData' does not exist on type 'ImageVolume | BaseStreamingImageVolume'.
+  Property 'getScalarData' does not exist on type 'ImageVolume'.
+src/renderer/features/measurements/planning/PedicleLogic.ts(27,67): error TS6133: 'volumeDirection' is declared but its value is never read.
+src/renderer/features/measurements/planning/PedicleLogic.ts(94,5): error TS6133: 'diameter' is declared but its value is never read.
+src/renderer/features/measurements/planning/PedicleLogic.ts(98,28): error TS2339: Property 'getScalarData' does not exist on type 'ImageVolume | BaseStreamingImageVolume'.
+  Property 'getScalarData' does not exist on type 'ImageVolume'.
+src/renderer/features/measurements/planning/PedicleLogic.ts(100,31): error TS2339: Property 'getScalarData' does not exist on type 'ImageVolume | BaseStreamingImageVolume'.
+  Property 'getScalarData' does not exist on type 'ImageVolume'.
+src/renderer/features/measurements/planning/PlanningTools.ts(302,11): error TS6133: 'cutRays' is declared but its value is never read.
+src/renderer/features/measurements/quick/PelvicParams.ts(12,11): error TS6133: 'fh1_radius' is declared but its value is never read.
+src/renderer/features/measurements/quick/PelvicParams.ts(17,11): error TS6133: 'fh2_radius' is declared but its value is never read.
+src/renderer/features/measurements/quick/SpinalCurvatures.ts(1,56): error TS6133: 'getDistance' is declared but its value is never read.
+src/renderer/features/navigation/LeftSidebar.tsx(21,5): error TS6133: 'MousePointer2' is declared but its value is never read.
+src/renderer/features/navigation/LeftSidebar.tsx(24,5): error TS6133: 'Scissors' is declared but its value is never read.
+src/renderer/features/navigation/LeftSidebar.tsx(25,5): error TS6133: 'Sparkles' is declared but its value is never read.
+src/renderer/features/navigation/LeftSidebar.tsx(27,5): error TS6133: 'Zap' is declared but its value is never read.
+src/renderer/features/navigation/LeftSidebar.tsx(28,5): error TS6133: 'Eraser' is declared but its value is never read.
+src/renderer/features/navigation/LeftSidebar.tsx(35,1): error TS6133: 'ImplantPropertiesPanel' is declared but its value is never read.
+src/renderer/features/navigation/LeftSidebar.tsx(37,1): error TS6192: All imports in import declaration are unused.
+src/renderer/lib/canvas/GeometryEngine.ts(38,27): error TS6133: 'EPSILON_TRANSFORM' is declared but its value is never read.
+src/renderer/lib/canvas/OpenOsteotomyOperation.api.test.ts(20,3): error TS6133: 'OperationResult' is declared but its value is never read.
+src/renderer/lib/canvas/OpenOsteotomyOperation.api.test.ts(83,22): error TS2322: Type 'StateNode | null' is not assignable to type 'StateNode'.
+  Type 'null' is not assignable to type 'StateNode'.
+src/renderer/lib/canvas/OpenOsteotomyOperation.integration.test.ts(79,22): error TS2322: Type 'StateNode | null' is not assignable to type 'StateNode'.
+  Type 'null' is not assignable to type 'StateNode'.
+src/renderer/lib/canvas/OpenOsteotomyOperation.integration.test.ts(125,13): error TS6133: 'operation' is declared but its value is never read.
+src/renderer/lib/canvas/OpenOsteotomyOperation.test.ts(21,34): error TS6133: 'OperationResult' is declared but its value is never read.
+src/renderer/lib/canvas/OpenOsteotomyOperation.test.ts(87,22): error TS2322: Type 'StateNode | null' is not assignable to type 'StateNode'.
+  Type 'null' is not assignable to type 'StateNode'.
+src/renderer/lib/canvas/TransformationCalculator.ts(34,27): error TS6133: 'EPSILON_DISTANCE' is declared but its value is never read.
+src/renderer/lib/store/canvasSlice.ts(291,18): error TS6133: 'side' is declared but its value is never read.
+src/renderer/lib/store/patientSlice.ts(182,33): error TS2345: Argument of type 'Omit<Study, "scans">' is not assignable to parameter of type 'Study'.
+  Property 'scans' is missing in type 'Omit<Study, "scans">' but required in type 'Study'.
