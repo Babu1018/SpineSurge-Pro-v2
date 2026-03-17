@@ -1,8 +1,12 @@
 import { Patient, Visit, Scan, Study, Context } from './store/types';
 
 // Determine API_BASE dynamically for Dev vs Prod/Server
-export const API_BASE = import.meta.env.VITE_API_URL || 
+const rawApiUrl = import.meta.env.VITE_API_URL || 
     (window.location.port === '5173' ? 'http://localhost:3001' : window.location.origin);
+
+export const API_BASE = (rawApiUrl && !rawApiUrl.startsWith('http')) 
+    ? `https://${rawApiUrl}` 
+    : rawApiUrl;
 
 export const api = {
     async getPatients(): Promise<Patient[]> {
