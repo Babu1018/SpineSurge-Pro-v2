@@ -3,31 +3,31 @@ services:
   - type: web
     name: spinesurge-backend
     runtime: node
-    buildCommand: npm install
-    startCommand: npx ts-node index.ts
+    buildCommand: npm install && npx tsc
+    startCommand: node dist/index.js
     rootDir: server
     envVars:
       - key: PORT
         value: 3001
       - key: NODE_ENV
         value: production
-    disk:
-      name: spinesurge-data
-      mountPath: /opt/render/project/src/server/uploads
-      sizeGB: 1
+    # disk: # Uncomment if using a paid plan for persistence
+    #   name: spinesurge-data
+    #   mountPath: /opt/render/project/src/server/uploads
+    #   sizeGB: 1
 
   # Frontend Static Site
   - type: static
     name: spinesurge-frontend
     runtime: static
     buildCommand: npm install && npx vite build
-    publishDir: out/renderer
+    publishDir: dist
     envVars:
       - key: VITE_API_URL
         fromService:
           name: spinesurge-backend
           type: web
-          property: host
+          property: hostWithScheme
     headers:
       - path: /*
         name: Cross-Origin-Opener-Policy
