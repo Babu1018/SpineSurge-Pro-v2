@@ -1,11 +1,8 @@
 import { Patient, Visit, Scan, Study, Context } from './store/types';
 
 // Determine API_BASE dynamically for Dev vs Prod/Server
-// In Electron Dev: window.location.port is 5173, API is 3001
-// In Production/Server: window.location.origin is the same for both
-export const API_BASE = window.location.port === '5173'
-    ? 'http://localhost:3001'
-    : window.location.origin;
+export const API_BASE = import.meta.env.VITE_API_URL || 
+    (window.location.port === '5173' ? 'http://localhost:3001' : window.location.origin);
 
 export const api = {
     async getPatients(): Promise<Patient[]> {

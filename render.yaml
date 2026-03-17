@@ -27,7 +27,7 @@ services:
         fromService:
           name: spinesurge-backend
           type: web
-          property: hostWithScheme
+          property: host
     headers:
       - path: /*
         name: Cross-Origin-Opener-Policy
