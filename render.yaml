@@ -3,12 +3,10 @@ services:
   - type: web
     name: spinesurge-backend
     runtime: node
-    buildCommand: npm install && npx tsc
-    startCommand: node dist/index.js
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start:prod
     rootDir: server
     envVars:
-      - key: PORT
-        value: 3001
       - key: NODE_ENV
         value: production
     # disk: # Uncomment if using a paid plan for persistence
@@ -20,8 +18,8 @@ services:
   - type: static
     name: spinesurge-frontend
     runtime: static
-    buildCommand: npm install && npx vite build
-    publishDir: dist
+    buildCommand: npm ci && npm run build
+    publishDir: out/renderer
     envVars:
       - key: VITE_API_URL
         fromService:

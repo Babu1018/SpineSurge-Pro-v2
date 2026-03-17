@@ -28,7 +28,7 @@ server.on('upgrade', (request, socket, head) => {
     });
 });
 
-const port = 3001;
+const port = process.env.PORT ? parseInt(process.env.PORT) : 3001;
 
 app.use(cors());
 app.use(express.json());
